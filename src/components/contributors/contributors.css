@@ -1,5 +1,6 @@
 .contributor__container {
-  width: 800px;
+  margin: 0 auto;
+  width: 890px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
