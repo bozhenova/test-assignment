@@ -4,9 +4,9 @@ export default class GithubService {
   API_BASE = `https://api.github.com`;
   REPOS_PER_PAGE = 10;
 
-  getMostPopularRepos = async () => {
+  getMostPopularRepos = async (page = 1) => {
     const response = await axios.get(
-      `${this.API_BASE}/search/repositories?q=stars:>=1&per_page=${this.REPOS_PER_PAGE}&sort=stars&order=desc`
+      `${this.API_BASE}/search/repositories?q=stars:>=1&page=${page}&per_page=${this.REPOS_PER_PAGE}&sort=stars&order=desc`
     );
     return response.data;
   };
