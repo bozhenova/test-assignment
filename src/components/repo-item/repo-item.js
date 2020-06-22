@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './repo-item.css';
 import { Link } from 'react-router-dom';
 import { parseDate, parseStargazersCount } from '../../utils';
@@ -22,6 +24,14 @@ const RepoItem = ({ id, name, stargazers_count, updated_at, html_url }) => {
       </Link>
     </div>
   );
+};
+
+RepoItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  stargazers_count: PropTypes.number.isRequired,
+  updated_at: PropTypes.string.isRequired,
+  html_url: PropTypes.string.isRequired
 };
 
 export default RepoItem;

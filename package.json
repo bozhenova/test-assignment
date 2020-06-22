@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "test-assignment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -47,13 +47,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bozhenova/test.git"
+    "url": "git+https://github.com/bozhenova/test-assignment.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bozhenova/test/issues"
+    "url": "https://github.com/bozhenova/test-assignment/issues"
   },
-  "homepage": "https://github.com/bozhenova/test"
+  "homepage": "./"
 }

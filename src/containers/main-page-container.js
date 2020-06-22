@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import debounceRender from 'react-debounce-render';
 
@@ -15,6 +16,15 @@ class MainPageContainer extends Component {
   constructor(props) {
     super(props);
     this.inputRef = React.createRef();
+    this.propTypes = {
+      repos: PropTypes.arrayOf(PropTypes.object.isRequired),
+      loading: PropTypes.bool.isRequired,
+      error: PropTypes.object
+    };
+    this.defaultProps = {
+      error: null
+    };
+
     this.state = {
       currentPage: 1,
       searchValue: ''

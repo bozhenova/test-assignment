@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import { parseDate, parseStargazersCount } from '../../utils';
 import './details-page.css';
 
-const DetailsPage = ({ currentRepo }) => {
+const DetailsPage = ({ currentRepo, languages }) => {
   const {
     html_url,
     name,
     stargazers_count,
     updated_at,
     description,
-    language,
     owner: { login, html_url: url, avatar_url }
   } = currentRepo;
-
   return (
     <div className='details__container'>
       <h3 className='details__name'>
@@ -31,12 +31,17 @@ const DetailsPage = ({ currentRepo }) => {
           </Link>
         </h3>
         <div className='details__language'>
-          <b>Language:</b> {language}
+          <b>Languages:</b> {Object.keys(languages).join(', ')}
         </div>
         <p>{description}</p>
       </div>
     </div>
   );
+};
+
+DetailsPage.propTypes = {
+  currentRepo: PropTypes.object.isRequired,
+  languages: PropTypes.object
 };
 
 export default DetailsPage;

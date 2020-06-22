@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import ReactPaginate from 'react-paginate';
+import PropTypes from 'prop-types';
+
 import './pagination.css';
 
 class Pagination extends Component {
+  static propTypes = {
+    currentPage: PropTypes.number.isRequired,
+    handlePageClick: PropTypes.func.isRequired
+  };
   state = { currentPage: 1 };
 
   render() {

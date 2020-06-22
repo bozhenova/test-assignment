@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import './contributor.css';
 
 const Contributor = ({ user }) => {
@@ -15,6 +17,10 @@ const Contributor = ({ user }) => {
       <img className='contributor__userpic' src={avatar_url} alt='userpic' />
     </div>
   );
+};
+
+Contributor.propTypes = {
+  user: PropTypes.object
 };
 
 export default Contributor;

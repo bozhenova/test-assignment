@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import RepoItem from '../repo-item';
 
 const RepoList = ({ repos }) => {
@@ -11,6 +13,10 @@ const RepoList = ({ repos }) => {
       ))}
     </ul>
   );
+};
+
+RepoList.propTypes = {
+  repos: PropTypes.arrayOf(PropTypes.object.isRequired)
 };
 
 export default RepoList;
