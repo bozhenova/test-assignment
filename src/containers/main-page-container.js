@@ -13,17 +13,19 @@ import ErrorIndicator from '../components/error-indicator';
 import './main-page-container.css';
 
 class MainPageContainer extends Component {
+  static defaultProps = {
+    error: null
+  };
+
+  static propTypes = {
+    repos: PropTypes.arrayOf(PropTypes.object.isRequired),
+    loading: PropTypes.bool.isRequired,
+    error: PropTypes.object
+  };
+
   constructor(props) {
     super(props);
     this.inputRef = React.createRef();
-    this.propTypes = {
-      repos: PropTypes.arrayOf(PropTypes.object.isRequired),
-      loading: PropTypes.bool.isRequired,
-      error: PropTypes.object
-    };
-    this.defaultProps = {
-      error: null
-    };
 
     this.state = {
       currentPage: 1,
@@ -35,25 +37,10 @@ class MainPageContainer extends Component {
     this.inputRef.current.focus();
     const searchValue = localStorage.getItem('searchValue') || '';
     const currentPage = localStorage.getItem('currentPage') || 1;
-
     this.setState({ searchValue, currentPage }, () => {
       this.updateData();
     });
   }
-
-  handleInputChange = () => {
-    const searchValue = this.inputRef.current.value;
-    this.setState({ searchValue }, () => {
-      this.saveDataToLocalStorage();
-      this.updateData();
-    });
-  };
-
-  saveDataToLocalStorage = () => {
-    const { currentPage, searchValue } = this.state;
-    localStorage.setItem('currentPage', currentPage);
-    localStorage.setItem('searchValue', searchValue);
-  };
 
   updateData = () => {
     this.state.searchValue
@@ -62,6 +49,20 @@ class MainPageContainer extends Component {
           this.state.currentPage
         )
       : this.props.fetchRepos(this.state.currentPage);
+  };
+
+  saveDataToLocalStorage = () => {
+    const { currentPage, searchValue } = this.state;
+    localStorage.setItem('currentPage', currentPage);
+    localStorage.setItem('searchValue', searchValue);
+  };
+
+  handleInputChange = () => {
+    const searchValue = this.inputRef.current.value;
+    this.setState({ searchValue }, () => {
+      this.saveDataToLocalStorage();
+      this.updateData();
+    });
   };
 
   handlePageClick = data => {
@@ -75,22 +76,24 @@ class MainPageContainer extends Component {
 
   render() {
     const { repos, loading, error } = this.props;
+    const { searchValue, currentPage } = this.state;
+
     return (
       <>
         <input
-          value={this.state.searchValue}
+          value={searchValue}
           ref={this.inputRef}
           className='search-bar'
           type='text'
           onChange={this.handleInputChange}
         />
         <div className='main'>
-          {error && <ErrorIndicator />}
           {loading && <Spinner />}
+          {error && <ErrorIndicator />}
         </div>
         {!error && !loading && <RepoList repos={repos} />}
         <Pagination
-          currentPage={this.state.currentPage - 1}
+          currentPage={currentPage - 1}
           handlePageClick={this.handlePageClick}
         />
       </>

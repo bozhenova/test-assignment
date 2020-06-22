@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './repo-item.css';
-import { Link } from 'react-router-dom';
 import { parseDate, parseStargazersCount } from '../../utils';
 
 const RepoItem = ({ id, name, stargazers_count, updated_at, html_url }) => {

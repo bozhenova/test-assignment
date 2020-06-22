@@ -17,8 +17,7 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "shortid": "^2.2.15"
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,5 +54,5 @@
   "bugs": {
     "url": "https://github.com/bozhenova/test-assignment/issues"
   },
-  "homepage": "./"
+  "homepage": "https://github.com/bozhenova/test-assignment"
 }
