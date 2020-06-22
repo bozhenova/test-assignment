@@ -5,6 +5,7 @@ const reducer = (state, action) => {
     return {
       repos: [],
       contributors: [],
+      languages: {},
       currentRepo: null,
       loading: true,
       error: null
@@ -25,13 +26,6 @@ const reducer = (state, action) => {
         repos: action.payload,
         loading: false,
         error: null
-      };
-
-    case types.FETCH_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload
       };
 
     case types.FETCH_REPO_REQUEST:
@@ -62,6 +56,28 @@ const reducer = (state, action) => {
         contributors: action.payload,
         loading: false,
         error: null
+      };
+
+    case types.FETCH_LANGUAGES_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null
+      };
+
+    case types.FETCH_LANGUAGES_SUCCESS:
+      return {
+        ...state,
+        languages: action.payload,
+        loading: false,
+        error: null
+      };
+
+    case types.FETCH_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload
       };
 
     default:

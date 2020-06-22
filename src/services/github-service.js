@@ -27,4 +27,9 @@ export default class GithubService {
     );
     return response.data;
   };
+
+  getRepoLanguages = async url => {
+    const response = await axios.get(url);
+    return response.data;
+  };
 }

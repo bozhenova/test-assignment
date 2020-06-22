@@ -14,6 +14,9 @@ const DetailsPage = ({ currentRepo, languages }) => {
     description,
     owner: { login, html_url: url, avatar_url }
   } = currentRepo;
+
+  const langs = Object.keys(languages).join(', ');
+
   return (
     <div className='details__container'>
       <h3 className='details__name'>
@@ -30,9 +33,11 @@ const DetailsPage = ({ currentRepo, languages }) => {
             {login}
           </Link>
         </h3>
-        <div className='details__language'>
-          <b>Languages:</b> {Object.keys(languages).join(', ')}
-        </div>
+        {langs ? (
+          <div className='details__language'>
+            <b>Languages:</b> ${langs}
+          </div>
+        ) : null}
         <p>{description}</p>
       </div>
     </div>
