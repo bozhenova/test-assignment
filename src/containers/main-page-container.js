@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import debounceRender from 'react-debounce-render';
 
-import { compose, debounce } from '../utils';
+import { compose } from '../utils';
 import Spinner from '../components/spinner';
 import RepoList from '../components/repo-list';
 import Pagination from '../components/pagination';
 import { withGithubService } from '../components/hoc';
 import { fetchRepos, fetchReposByQuery } from '../redux/actions/actions';
 import ErrorIndicator from '../components/error-indicator';
-
 import './main-page-container.css';
 
 class MainPageContainer extends Component {
@@ -23,57 +23,43 @@ class MainPageContainer extends Component {
 
   componentDidMount() {
     this.inputRef.current.focus();
-    const searchValue =
-      localStorage.getItem('searchValue') === null
-        ? ''
-        : localStorage.getItem('searchValue');
-    const currentPage =
-      localStorage.getItem('currentPage') === null
-        ? 1
-        : JSON.parse(localStorage.getItem('currentPage'));
+    const searchValue = localStorage.getItem('searchValue') || '';
+    const currentPage = localStorage.getItem('currentPage') || 1;
 
     this.setState({ searchValue, currentPage }, () => {
-      if (!this.state.searchValue) {
-        this.props.fetchRepos(this.state.currentPage);
-      } else {
-        this.props.fetchReposByQuery(
-          this.state.searchValue,
-          this.state.currentPage
-        );
-      }
+      this.updateData();
     });
   }
 
   handleInputChange = () => {
     const searchValue = this.inputRef.current.value;
     this.setState({ searchValue }, () => {
-      this.saveData();
-      this.state.searchValue
-        ? this.props.fetchReposByQuery(
-            this.state.searchValue,
-            this.state.currentPage
-          )
-        : this.props.fetchRepos(this.state.currentPage);
+      this.saveDataToLocalStorage();
+      this.updateData();
     });
   };
 
-  saveData = () => {
+  saveDataToLocalStorage = () => {
     const { currentPage, searchValue } = this.state;
     localStorage.setItem('currentPage', currentPage);
     localStorage.setItem('searchValue', searchValue);
+  };
+
+  updateData = () => {
+    this.state.searchValue
+      ? this.props.fetchReposByQuery(
+          this.state.searchValue,
+          this.state.currentPage
+        )
+      : this.props.fetchRepos(this.state.currentPage);
   };
 
   handlePageClick = data => {
     const selected = data.selected;
 
     this.setState({ currentPage: selected + 1 }, () => {
-      this.saveData();
-      this.state.searchValue
-        ? this.props.fetchReposByQuery(
-            this.state.searchValue,
-            this.state.currentPage
-          )
-        : this.props.fetchRepos(this.state.currentPage);
+      this.saveDataToLocalStorage();
+      this.updateData();
     });
   };
 
@@ -113,7 +99,9 @@ const mapStateToProps = ({ repos, loading, error }) => {
   return { repos, loading, error };
 };
 
+const debouncedMainPageContainer = debounceRender(MainPageContainer, 500);
+
 export default compose(
   withGithubService(),
   connect(mapStateToProps, mapDispatchToProps)
-)(MainPageContainer);
+)(debouncedMainPageContainer);
