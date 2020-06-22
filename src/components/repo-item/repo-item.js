@@ -13,7 +13,9 @@ const RepoItem = ({ id, name, stargazers_count, updated_at, html_url }) => {
         <div className='repo__star'>
           {parseStargazersCount(stargazers_count)} stars
         </div>
-        <div>Updated {parseDate(updated_at)}</div>
+        <div>
+          <i>Updated {parseDate(updated_at)}</i>
+        </div>
       </div>
       <Link to={html_url} target='_blank'>
         {html_url}

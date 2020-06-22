@@ -1,0 +1,26 @@
+.details__container {
+  text-align: center;
+}
+.details__card:last-child {
+  margin-bottom: 25px;
+}
+
+.details__info {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.details__userpic {
+  width: 120px;
+  height: 120px;
+}
+
+.details__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.details__nickname {
+  font-size: 1.2rem;
+}

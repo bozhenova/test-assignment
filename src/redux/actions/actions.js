@@ -75,21 +75,13 @@ export const fetchRepo = (githubService, dispatch) => id => {
     .getRepoById(id)
     .then(data => {
       dispatch(repoLoaded(data));
-      return data;
-    })
-    // .then(data => {
-    //   fetchContributors(data.contributors_url);
-    // })
-    .catch(err => dispatch(dataError(err)));
-};
+      dispatch(contributorsRequested());
 
-export const fetchContributors = (githubService, dispatch) => url => {
-  dispatch(contributorsRequested());
-
-  githubService
-    .getMostActiveContributors(url)
-    .then(data => {
-      dispatch(contributorsLoaded(data.slice(0, 10)));
+      githubService
+        .getMostActiveContributors(data.contributors_url)
+        .then(data => {
+          dispatch(contributorsLoaded(data.slice(0, 10)));
+        });
     })
     .catch(err => dispatch(dataError(err)));
 };

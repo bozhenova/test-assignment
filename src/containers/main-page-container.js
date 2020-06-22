@@ -74,7 +74,7 @@ class MainPageContainer extends Component {
           type='text'
           onChange={this.handleInputChange}
         />
-        <div className='main' style={{ textAlign: 'center' }}>
+        <div className='main'>
           {error && <ErrorIndicator />}
           {loading && <Spinner />}
         </div>
