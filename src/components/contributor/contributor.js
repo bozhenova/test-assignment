@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './contributor.css';
@@ -10,9 +9,9 @@ const Contributor = ({ user }) => {
   return (
     <div className='contributor__card' key={id}>
       <h3 className='contributor__name'>
-        <Link to={html_url} target='_blank'>
+        <a href={html_url} rel='noopener noreferrer' target='_blank'>
           {login}
-        </Link>
+        </a>
       </h3>
       <img className='contributor__userpic' src={avatar_url} alt='userpic' />
     </div>

@@ -19,9 +19,9 @@ const RepoItem = ({ id, name, stargazers_count, updated_at, html_url }) => {
           <i>Updated {parseDate(updated_at)}</i>
         </div>
       </div>
-      <Link to={html_url} target='_blank'>
+      <a href={html_url} rel='noopener noreferrer' target='_blank'>
         {html_url}
-      </Link>
+      </a>
     </div>
   );
 };

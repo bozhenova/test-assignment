@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { parseDate, parseStargazersCount } from '../../utils';
@@ -20,7 +19,9 @@ const DetailsPage = ({ currentRepo, languages }) => {
   return (
     <div className='details__container'>
       <h3 className='details__name'>
-        <Link to={html_url}>{name}</Link>
+        <a href={html_url} rel='noopener noreferrer' target='_blanc'>
+          {name}
+        </a>
       </h3>
       <div className='details__info'>
         <div>{parseStargazersCount(stargazers_count)} stars</div>
@@ -29,9 +30,14 @@ const DetailsPage = ({ currentRepo, languages }) => {
         </p>
         <img className='details__userpic' src={avatar_url} alt='userpic' />
         <h3 className='details__info'>
-          <Link to={url} className='__nickname'>
+          <a
+            href={url}
+            rel='noopener noreferrer'
+            target='_blanc'
+            className='__nickname'
+          >
             {login}
-          </Link>
+          </a>
         </h3>
         {langs ? (
           <div className='details__language'>
