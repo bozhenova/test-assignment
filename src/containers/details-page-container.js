@@ -40,7 +40,7 @@ class DetailsPageContainer extends Component {
         {currentRepo && !error && !loading && (
           <DetailsPage currentRepo={currentRepo} languages={languages} />
         )}
-        {contributors && !error && !loading && (
+        {contributors.length && !error && !loading && (
           <Contributors users={contributors} />
         )}
       </>
