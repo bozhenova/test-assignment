@@ -1,7 +1,8 @@
 .pagination {
   margin: 0 auto;
+  margin-top: 20px;
   padding: 0;
-  width: 500px;
+  width: 550px;
   height: 45px;
 
   display: flex;

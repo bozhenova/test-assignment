@@ -90,8 +90,8 @@ class MainPageContainer extends Component {
         <div className='main'>
           {loading && <Spinner />}
           {error && <ErrorIndicator />}
+          {!error && !loading && <RepoList repos={repos} />}
         </div>
-        {!error && !loading && <RepoList repos={repos} />}
         <Pagination
           currentPage={currentPage - 1}
           handlePageClick={this.handlePageClick}
