@@ -23,13 +23,11 @@ const DetailsPage = ({ currentRepo, languages }) => {
           {name}
         </a>
       </h3>
-      <div className='details__info'>
+      <div>
         <div>{parseStargazersCount(stargazers_count)} stars</div>
-        <p className='details__info'>
-          <i>Updated {parseDate(updated_at)}</i>
-        </p>
+        <p className='details__info'>Updated {parseDate(updated_at)}</p>
         <img className='details__userpic' src={avatar_url} alt='userpic' />
-        <h3 className='details__info'>
+        <h3>
           <a
             href={url}
             rel='noopener noreferrer'
@@ -44,7 +42,7 @@ const DetailsPage = ({ currentRepo, languages }) => {
             <b>Languages:</b> ${langs}
           </div>
         ) : null}
-        <p>{description}</p>
+        <p className='details__description'>{description}</p>
       </div>
     </div>
   );

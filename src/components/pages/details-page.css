@@ -9,6 +9,7 @@
   padding: 0;
   margin-top: 5px;
   margin-bottom: 10px;
+  font-style: italic;
 }
 
 .details__userpic {
@@ -23,4 +24,17 @@
 
 .details__nickname {
   font-size: 1.2rem;
+}
+
+.details__language {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.details__description {
+  padding: 10px;
+  margin: 0;
+  padding-bottom: 0;
+  font-style: italic;
+  font-size: 1.1rem;
 }
