@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/bozhenova/test-assignment/static/css/main.65b5f873.chunk.css",
-    "main.js": "/bozhenova/test-assignment/static/js/main.b670682f.chunk.js",
-    "main.js.map": "/bozhenova/test-assignment/static/js/main.b670682f.chunk.js.map",
+    "main.css": "/bozhenova/test-assignment/static/css/main.92eb8154.chunk.css",
+    "main.js": "/bozhenova/test-assignment/static/js/main.5302e861.chunk.js",
+    "main.js.map": "/bozhenova/test-assignment/static/js/main.5302e861.chunk.js.map",
     "runtime-main.js": "/bozhenova/test-assignment/static/js/runtime-main.8f6cd733.js",
     "runtime-main.js.map": "/bozhenova/test-assignment/static/js/runtime-main.8f6cd733.js.map",
-    "static/js/2.6e5b98d6.chunk.js": "/bozhenova/test-assignment/static/js/2.6e5b98d6.chunk.js",
-    "static/js/2.6e5b98d6.chunk.js.map": "/bozhenova/test-assignment/static/js/2.6e5b98d6.chunk.js.map",
+    "static/js/2.5c059fa0.chunk.js": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js",
+    "static/js/2.5c059fa0.chunk.js.map": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js.map",
     "index.html": "/bozhenova/test-assignment/index.html",
-    "precache-manifest.6f17aafa19fc7e70a2869edf8f1d7e48.js": "/bozhenova/test-assignment/precache-manifest.6f17aafa19fc7e70a2869edf8f1d7e48.js",
+    "precache-manifest.750eabd0695315d7cf01b5d168e7e9f8.js": "/bozhenova/test-assignment/precache-manifest.750eabd0695315d7cf01b5d168e7e9f8.js",
     "service-worker.js": "/bozhenova/test-assignment/service-worker.js",
-    "static/css/main.65b5f873.chunk.css.map": "/bozhenova/test-assignment/static/css/main.65b5f873.chunk.css.map",
-    "static/js/2.6e5b98d6.chunk.js.LICENSE.txt": "/bozhenova/test-assignment/static/js/2.6e5b98d6.chunk.js.LICENSE.txt",
+    "static/css/main.92eb8154.chunk.css.map": "/bozhenova/test-assignment/static/css/main.92eb8154.chunk.css.map",
+    "static/js/2.5c059fa0.chunk.js.LICENSE.txt": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js.LICENSE.txt",
     "static/media/pagination.css": "/bozhenova/test-assignment/static/media/prev.6c9efe0c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8f6cd733.js",
-    "static/js/2.6e5b98d6.chunk.js",
-    "static/css/main.65b5f873.chunk.css",
-    "static/js/main.b670682f.chunk.js"
+    "static/js/2.5c059fa0.chunk.js",
+    "static/css/main.92eb8154.chunk.css",
+    "static/js/main.5302e861.chunk.js"
   ]
 }

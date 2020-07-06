@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f5d9cd8af3a2661fb4b049f381bd9726",
+    "revision": "3ac604a51f32247317a30e2acab88bdf",
     "url": "/bozhenova/test-assignment/index.html"
   },
   {
-    "revision": "6ca5ed9a15702d3ff571",
-    "url": "/bozhenova/test-assignment/static/css/main.65b5f873.chunk.css"
+    "revision": "4431bf139f2ec5060021",
+    "url": "/bozhenova/test-assignment/static/css/main.92eb8154.chunk.css"
   },
   {
-    "revision": "0d8c77e8006a2308401e",
-    "url": "/bozhenova/test-assignment/static/js/2.6e5b98d6.chunk.js"
+    "revision": "6e0bd10ca386bb123806",
+    "url": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/bozhenova/test-assignment/static/js/2.6e5b98d6.chunk.js.LICENSE.txt"
+    "url": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ca5ed9a15702d3ff571",
-    "url": "/bozhenova/test-assignment/static/js/main.b670682f.chunk.js"
+    "revision": "4431bf139f2ec5060021",
+    "url": "/bozhenova/test-assignment/static/js/main.5302e861.chunk.js"
   },
   {
     "revision": "2f2d4440c681a0a3e0e6",
