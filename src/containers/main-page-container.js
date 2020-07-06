@@ -112,7 +112,7 @@ const mapStateToProps = ({ repos, loading, error }) => {
   return { repos, loading, error };
 };
 
-const debouncedMainPageContainer = debounceRender(MainPageContainer, 500);
+const debouncedMainPageContainer = debounceRender(MainPageContainer, 800);
 
 export default compose(
   withGithubService(),
