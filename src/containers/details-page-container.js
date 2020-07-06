@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { compose } from '../utils';
 import Spinner from '../components/spinner';
 import Contributors from '../components/contributors';
-import { withGithubService } from '../components/hoc';
+import { withGithubService } from '../hoc';
 import ErrorIndicator from '../components/error-indicator';
 import DetailsPage from '../components/pages/details-page';
 import { fetchRepo } from '../redux/actions/actions';

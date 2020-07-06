@@ -1,5 +1,5 @@
 import React from 'react';
-import { GithubServiceConsumer } from '../github-service-context';
+import { GithubServiceConsumer } from '../components/github-service-context';
 
 const withGithubService = () => Wrapped => {
   return props => {

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import debounceRender from 'react-debounce-render';
 
-import { compose } from '../utils';
+import { compose, debounce } from '../utils';
 import Spinner from '../components/spinner';
 import RepoList from '../components/repo-list';
 import Pagination from '../components/pagination';
-import { withGithubService } from '../components/hoc';
+import { withGithubService } from '../hoc';
 import { fetchRepos, fetchReposByQuery } from '../redux/actions/actions';
 import ErrorIndicator from '../components/error-indicator';
 import './main-page-container.css';
@@ -42,14 +42,14 @@ class MainPageContainer extends Component {
     });
   }
 
-  updateData = () => {
+  updateData = debounce(() => {
     this.state.searchValue
       ? this.props.fetchReposByQuery(
           this.state.searchValue,
           this.state.currentPage
         )
       : this.props.fetchRepos(this.state.currentPage);
-  };
+  }, 800);
 
   saveDataToLocalStorage = () => {
     const { currentPage, searchValue } = this.state;
@@ -92,10 +92,12 @@ class MainPageContainer extends Component {
           {error && <ErrorIndicator />}
           {!error && !loading && <RepoList repos={repos} />}
         </div>
-        <Pagination
-          currentPage={currentPage - 1}
-          handlePageClick={this.handlePageClick}
-        />
+        {searchValue && (
+          <Pagination
+            currentPage={currentPage - 1}
+            handlePageClick={this.handlePageClick}
+          />
+        )}
       </>
     );
   }
