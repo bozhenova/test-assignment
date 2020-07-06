@@ -92,7 +92,7 @@ class MainPageContainer extends Component {
           {error && <ErrorIndicator />}
           {!error && !loading && <RepoList repos={repos} />}
         </div>
-        {searchValue && (
+        {searchValue && repos.length >= 10 && (
           <Pagination
             currentPage={currentPage - 1}
             handlePageClick={this.handlePageClick}
