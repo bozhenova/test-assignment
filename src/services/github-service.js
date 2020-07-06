@@ -23,7 +23,7 @@ export default class GithubService {
 
   getReposByQuery = async (query, page = 1) => {
     const response = await axios.get(
-      `${this.API_BASE}/search/repositories?q=${query}&page=${page}&per_page=${this.REPOS_PER_PAGE}&sort=stars&order=desc`
+      `${this.API_BASE}/search/repositories?q=${query}in:name&page=${page}&per_page=${this.REPOS_PER_PAGE}&sort=stars&order=desc`
     );
     return response.data;
   };
