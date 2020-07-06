@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/bozhenova/test-assignment/static/css/main.92eb8154.chunk.css",
-    "main.js": "/bozhenova/test-assignment/static/js/main.5302e861.chunk.js",
-    "main.js.map": "/bozhenova/test-assignment/static/js/main.5302e861.chunk.js.map",
-    "runtime-main.js": "/bozhenova/test-assignment/static/js/runtime-main.8f6cd733.js",
-    "runtime-main.js.map": "/bozhenova/test-assignment/static/js/runtime-main.8f6cd733.js.map",
-    "static/js/2.5c059fa0.chunk.js": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js",
-    "static/js/2.5c059fa0.chunk.js.map": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js.map",
-    "index.html": "/bozhenova/test-assignment/index.html",
-    "precache-manifest.750eabd0695315d7cf01b5d168e7e9f8.js": "/bozhenova/test-assignment/precache-manifest.750eabd0695315d7cf01b5d168e7e9f8.js",
-    "service-worker.js": "/bozhenova/test-assignment/service-worker.js",
-    "static/css/main.92eb8154.chunk.css.map": "/bozhenova/test-assignment/static/css/main.92eb8154.chunk.css.map",
-    "static/js/2.5c059fa0.chunk.js.LICENSE.txt": "/bozhenova/test-assignment/static/js/2.5c059fa0.chunk.js.LICENSE.txt",
-    "static/media/pagination.css": "/bozhenova/test-assignment/static/media/prev.6c9efe0c.svg"
+    "main.css": "/test-assignment/static/css/main.e990fe18.chunk.css",
+    "main.js": "/test-assignment/static/js/main.5302e861.chunk.js",
+    "main.js.map": "/test-assignment/static/js/main.5302e861.chunk.js.map",
+    "runtime-main.js": "/test-assignment/static/js/runtime-main.4063537b.js",
+    "runtime-main.js.map": "/test-assignment/static/js/runtime-main.4063537b.js.map",
+    "static/js/2.5c059fa0.chunk.js": "/test-assignment/static/js/2.5c059fa0.chunk.js",
+    "static/js/2.5c059fa0.chunk.js.map": "/test-assignment/static/js/2.5c059fa0.chunk.js.map",
+    "index.html": "/test-assignment/index.html",
+    "precache-manifest.310331aeafb3026f968225f1c4589491.js": "/test-assignment/precache-manifest.310331aeafb3026f968225f1c4589491.js",
+    "service-worker.js": "/test-assignment/service-worker.js",
+    "static/css/main.e990fe18.chunk.css.map": "/test-assignment/static/css/main.e990fe18.chunk.css.map",
+    "static/js/2.5c059fa0.chunk.js.LICENSE.txt": "/test-assignment/static/js/2.5c059fa0.chunk.js.LICENSE.txt",
+    "static/media/pagination.css": "/test-assignment/static/media/prev.6c9efe0c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8f6cd733.js",
+    "static/js/runtime-main.4063537b.js",
     "static/js/2.5c059fa0.chunk.js",
-    "static/css/main.92eb8154.chunk.css",
+    "static/css/main.e990fe18.chunk.css",
     "static/js/main.5302e861.chunk.js"
   ]
 }
