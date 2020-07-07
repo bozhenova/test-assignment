@@ -1,4 +1,5 @@
 {
+  "homepage": "http://bozhenova.github.io/test-assignment",
   "name": "test-assignment",
   "version": "0.1.0",
   "private": true,
@@ -42,17 +43,8 @@
     ]
   },
   "description": "Run `npm i && npm start`",
-  "main": "index.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bozhenova/test-assignment.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bozhenova/test-assignment/issues"
-  },
-  "homepage": "./"
+  "license": "ISC"
 }
